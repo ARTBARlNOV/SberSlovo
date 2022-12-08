@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SberSlovo/static/css/main.cedd8be9.css",
+    "main.js": "/SberSlovo/static/js/main.af0749ed.js",
+    "index.html": "/SberSlovo/index.html",
+    "main.cedd8be9.css.map": "/SberSlovo/static/css/main.cedd8be9.css.map",
+    "main.af0749ed.js.map": "/SberSlovo/static/js/main.af0749ed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cedd8be9.css",
+    "static/js/main.af0749ed.js"
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/SberSlovo/static/css/main.610520e3.css",
+    "main.css": "/SberSlovo/static/css/main.743d90f9.css",
     "main.js": "/SberSlovo/static/js/main.579d638e.js",
     "index.html": "/SberSlovo/index.html",
-    "main.610520e3.css.map": "/SberSlovo/static/css/main.610520e3.css.map",
+    "main.743d90f9.css.map": "/SberSlovo/static/css/main.743d90f9.css.map",
     "main.579d638e.js.map": "/SberSlovo/static/js/main.579d638e.js.map"
   },
   "entrypoints": [
-    "static/css/main.610520e3.css",
+    "static/css/main.743d90f9.css",
     "static/js/main.579d638e.js"
   ]
 }

@@ -1,21 +1,68 @@
 /* eslint-disable quote-props */
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import './App.css';
-import Navbar from './Components/Navbar/Navbar';
-import VerifyBar from './Components/VerifyBar/VerifyBar';
-import showInfo from './Helpers/showInfo';
+import MainPage from './pages/MainPage';
+import Context from './Context/context';
+import { formData, url } from './consts/consts';
 
 function App() {
-  const [getInfo, setGetInfo] = useState(null);
+  const [info, setInfo] = useState(null);
+  const [firstSelectedFile, setFirstSelectedFile] = useState(null);
+  const [secondSelectedFile, setSecondSelectedFile] = useState(null);
+
+  const firstFilePicker = useRef(null);
+  const secondFilePicker = useRef(null);
+
+  const firstClickHandler = () => {
+    firstFilePicker.current.click();
+  };
+
+  const secondClickHandler = () => {
+    secondFilePicker.current.click();
+  };
+
+  const firstUploadHandler = (e) => {
+    setFirstSelectedFile(e.target.files[0]);
+  };
+
+  const secondUploadHandler = (e) => {
+    setSecondSelectedFile(e.target.files[0]);
+  };
+
+  const tagSubmit = async (e) => {
+    e.preventDefault();
+
+    formData.append('file_1', firstSelectedFile, firstSelectedFile.name);
+    formData.append('file_2', secondSelectedFile, secondSelectedFile.name);
+    const options = {
+      method: 'POST',
+      body: formData,
+    };
+
+    const res = await fetch(url, options);
+    const data = await res.json();
+    setInfo(data);
+  };
 
   return (
-    <div className="App">
-      <Navbar />
-
-      {!getInfo && (<VerifyBar getInfo={getInfo} setGetInfo={setGetInfo} />)}
-
-      {getInfo && showInfo(getInfo)}
-    </div>
+    <Context.Provider value={{
+      info,
+      setInfo,
+      firstFilePicker,
+      secondFilePicker,
+      firstSelectedFile,
+      secondSelectedFile,
+      firstClickHandler,
+      secondClickHandler,
+      firstUploadHandler,
+      secondUploadHandler,
+      tagSubmit,
+    }}
+    >
+      <div className="App">
+        <MainPage />
+      </div>
+    </Context.Provider>
   );
 }
 

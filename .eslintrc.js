@@ -33,5 +33,6 @@ module.exports = {
     'no-lone-blocks': 0,
     'no-param-reassign': 0,
     'linebreak-style': 0,
+    'react/jsx-no-constructed-context-values': 0,
   },
 };

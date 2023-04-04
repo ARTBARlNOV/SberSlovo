@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
-import FirstFileUploadedOff from '../../Uploaded/UploadedOff/FirstFileUploadedOff/FirstFileUploadedOff';
-import FirstFileUploadedOn from '../../Uploaded/UploadedOn/FirstFileUploadedOn/FirstFileUploadedOn';
-import UploadFileButton from '../../Button/UploadFileButton/UploadFileButton';
-import SecondFileUploadedOff from '../../Uploaded/UploadedOff/SecondFileUploadedOff/SecondFileUploadedOff';
-import SecondFileUploadedOn from '../../Uploaded/UploadedOn/SecondFileUploadedOn/SecondFileUploadedOn';
+import FirstFileUploadedOff from '../../UploadedFiles/UploadedOff/FirstFileUploadedOff/FirstFileUploadedOff';
+import FirstFileUploadedOn from '../../UploadedFiles/UploadedOn/FirstFileUploadedOn/FirstFileUploadedOn';
+import UploadFileButton from '../../Buttons/UploadFileButton/UploadFileButton';
+import SecondFileUploadedOff from '../../UploadedFiles/UploadedOff/SecondFileUploadedOff/SecondFileUploadedOff';
+import SecondFileUploadedOn from '../../UploadedFiles/UploadedOn/SecondFileUploadedOn/SecondFileUploadedOn';
 import CheckSignOff from '../../CheckSign/CheckSignOff/CheckSignOff';
 import CheckSignOn from '../../CheckSign/CheckSignOn/CheckSignOn';
 import FirstUploadedFileContainer from '../../FilesContainer/UploadedFileContainers/FirstUploadedFileContainer/FirstUploadedFileContainer';
 import SecondUploadedFileContainer from '../../FilesContainer/UploadedFileContainers/SecondUploadedFileContainer/SecondUploadedFileContainer';
 import Context from '../../../Context/context';
 
-export default function SelectedVerifyBar() {
+export default function SelectedFilesVerifyBar() {
   const {
     firstSelectedFile,
     secondSelectedFile,

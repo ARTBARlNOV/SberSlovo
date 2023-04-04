@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import img from '../../../assets/img/ic download.png';
 import Context from '../../../Context/context';
 
-function SecondFileContainer(props) {
+function SecondFileContainer() {
   const {
     secondUploadHandler,
     secondfilePicker,

@@ -12,7 +12,8 @@ export default function MainPage() {
       {info ? (
         <Info />
       ) : (
-        <VerifyBar />)}
+        <VerifyBar />
+      )}
     </>
   );
 }

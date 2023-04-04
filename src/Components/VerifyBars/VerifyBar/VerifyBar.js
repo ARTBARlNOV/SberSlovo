@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import './VerifyBar.css';
 import NoSelectedFilesVerifyBar from '../NoSelectedFilesVerifyBar/NoSelectedFilesVerifyBar';
-import SelectedVerifyBar from '../SelectedVerifyBar/SelectedVerifyBar';
 import Context from '../../../Context/context';
+import SelectedFilesVerifyBar from '../SelectedFilesVerifyBar/SelectedFilesVerifyBar';
 
 export default function VerifyBar() {
   const { firstSelectedFile, secondSelectedFile } = useContext(Context);
@@ -11,7 +11,7 @@ export default function VerifyBar() {
     !firstSelectedFile && !secondSelectedFile ? (
       <NoSelectedFilesVerifyBar />
     ) : (
-      <SelectedVerifyBar />
+      <SelectedFilesVerifyBar />
     )
   );
 }
